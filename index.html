@@ -1,333 +1,170 @@
+<?php
+header("Expires: Tue, 01 Jan 2000 00:00:00 GMT");
+header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>Ahmad's Portfolio</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Web developer" name="keywords">
-    <meta content="I can develop you a very good looking and responsive website for your Portfolio, Business, Personal, and any other type of website" name="description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/800aa181fe.js" crossorigin="anonymous"></script>
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <title>Single Haulage Fee (SHF)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
-<body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <!-- Navbar Start -->
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand ml-lg-3">
-            <h1 class="m-0 display-5"><span class="text-primary">Port</span>Folio</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-            <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#skill" class="nav-item nav-link">Skills</a>
-                <a href="#service" class="nav-item nav-link">Services</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/Treesclear.png" alt="">
-                </div>
-                <div class="col-lg-7 text-center text-lg-left">
-                    <h3 class="text-white font-weight-normal mb-3">I'm</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Ahmad Usman</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">Developer, Programmer, Freelancer</div>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="" class="btn btn-outline-light mr-5">Download CV</a>
-                        <button type="button" class="btn-play" data-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                            <span></span>
-                        </button>
-                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body>
+    <div class="blocker">
+        <div class="block-spinner"></div>
+        <p class="block">Sorry, the site have stopped working. pay for your subscription to continue</p>
+        <input type="number" class="code" onchange="codeSwap()">
     </div>
-    <!-- Header End -->
-
-
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
+    <div class="doc-container">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/About.jpg" alt="">
-                </div>
-                <div class="col-lg-7">
-                    <h3 class="mb-4">Web Developer</h3>
-                    <p>                            My name is Ahmad Usman, I am a web developer, a programmer and a freelancer. I have an excellent background in HTML5, CSS3, Bootstrap, Javascript, Typescript, PHP, Python, and SQL.
-                            My long-term working experience has given me a massive clue of how to make a website looks more professional.</p>
-                    <div class="row mb-3">
-                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Ahmad Usman</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">+234 9065 329 329</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">ahmadwebman@gmail.com</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
-                    </div>
-                    <a href="mailto:ahmadwebman@gmail.com?subject=Website Project&body=Hi, I want to hire you for my web development project. Are you there?" class="btn btn-outline-primary mr-4">Hire Me</a>
-                    <a href="https://wa.me/2349065293293?text=Hey, I'm interested in your services. Can you get me a website?" class="btn btn-outline-primary">Learn More</a>
-                </div>
-            </div>
+        <div class="abbr">Shf</div>
+        <div class="full-mean">Single Haulage Fee</div>
+        <div class="date"></div>
+        <div class="break-point">
+             ===========================
         </div>
-    </div>
-    <!-- About End -->
-
-
-    <!-- Skill Start -->
-    <div class="container-fluid py-5" id="skill">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">HTML</h6>
-                            <h6 class="font-weight-bold">97%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">CSS</h6>
-                            <h6 class="font-weight-bold">92%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">PHP</h6>
-                            <h6 class="font-weight-bold">76%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Javascript</h6>
-                            <h6 class="font-weight-bold">83%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Python</h6>
-                            <h6 class="font-weight-bold">92%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Wordpress</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Skill End -->
-
-
-    <!-- Services Start -->
-    <div class="container-fluid pt-5" id="service">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
-            </div>
-            <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-landmark service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Business Website</h4>
-                    </div>
-	              <p>I can develop an excellent and responsive business website for your Restaurant, School, Hospital, Office, Hotel, Cinema, Union and any type of business center.</p>
-	              
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-user service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Personal Website</h4>
-                    </div>
-	              <p>I can develop an impressive and responsive website for your lifestyle where people will find your photos, biography, social media links and know much about you.</p>
-	              
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-handshake service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Portfolio Website</h4>
-                    </div>
-	              <p>I can develop a good looking and responsive website for your portfolio services. Such as: Video Editting, Photography, Copywriting, Graphics Design, Teaching & Tutoring and many more.</p>
-	              
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-cart-shopping service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">E-Commerce Website</h4>
-                    </div>
-	              <p>I can develop a fast and responsive website for your eCommerce or online Store to sell more products and get linked to massive customers online.</p>
-	              
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Portal</h4>
-                    </div>
-	              <p>I can develop a high quality and responsive recruitment portal for your brand to employ as much people as you can.</p>
-	              
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-money-bills service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Landing Page</h4>
-                    </div>
-	              <p>I can develop an attractive and responsive Landing page for your Affiliate Marketing, where people will learn more about your products before proceeding to the sales page.</p>
-	              
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Services End -->
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form text-center">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
-                                        required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
-                                        required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
-                                    Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
-        <div class="container text-center py-5">
-            <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social" href="https://instagram.com/developer.ahmad?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/ahmad-usman-44738a249"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+        <div class="user-info">
             
-            
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Ahmadwebman</a>. All Rights Reserved. Developed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">Ahmad Usman</a>
-            </p>
+            <div class="payer-full-name">
+                <span class="payer-name">Payer: </span>
+                <span class="payer-value"></span>
+            </div>
+            <div class="payer">
+                <span class="payer-title">Phone Number: </span><span class="phone-number"></span>
+            </div>    
+            <div class="payer">
+                <span class="vehicle">Vehicle Number: </span>
+                <span class="vehicle-number"></span>
+            </div>
+            <div class="vehicle">
+                <span class="vehicle-title">Vehicle Type: </span>
+                <span class="vehicle-type"></span>
+            </div>
+            <div class="payer">
+                <span class="state-origin">Origin State: </span><span class="origin-state"></span>
+            </div>
+            <div class="payer">
+                <span class="payer-title">Origin LGA:</span><span class="origin-lga"></span>
+            </div>
+            <div class="payer">
+                <span class="arrival-state">Destination State:  </span><span class="destination-state"></span>
+            </div>
+            <div class="payer-lga">
+                <span class="payer-title">Destination LGA: </span><span class="destination-lga"></span>
+            </div>
+            <div class="payer">
+                <span class="payer-title">Contact: </span><span class="contact-value"></span>
+            </div>
+            <div class="reference-transaction">
+                <div class="total-transaction">
+                    <span class="payer-title">Transaction Reference: </span>
+                    <span> 220232</span>
+                    
+                </div>
+                <span class="other-reference">
+                        
+                </span>
+
+                
+            </div>
+            <div class="payer">
+                <span class="payer-title">Terminal ID:</span>
+                <span class="terminal-id">
+201120TD
+                </span>
+            </div>
+            <div class="payer">
+                <span class="payer-title">Date: </span><span class="today-date"></span>
+            </div>
+        </div>
+        <div class="break-point">
+             ===========================
+        </div>
+        <div class="payment">
+            <div class="amount-paid"><div class="amount-name">Amount Paid:</div><div class="amount" name="amount"></div></div>
+            <div class="stats">
+                <div class="status-name">Status:  </div><div class="status">Approved</div>
+            </div>
+            <div class="qr-img">
+                <img src="" class="qr-image">
+            </div>
+        <div class="break-point">
+             ===========================
+        </div>
+        </div>
+        <p class="power">powered by Citiserve</p>
         </div>
     </div>
-    <!-- Footer End -->
+    <div class="buttons-holder">
+        <div class="print-button">
+            <button class="printer">Print Reciept</button>
+            <button class="add-another">Add</button>
+        </div>
+        <div class="control-buttons">
+            <button class="reset">Reset</button>
+            
+        
+        
+        </div>
+    </div>
+    <form action="save_data.php" method="post" class="input-info" id="dataForm">
+        <label>Full Name:</label>
+        <input type="text" name="full_name" id="name-input" placeholder="Enter Full Name" required>
+        <label>Mobile Number:</label>
+        <input type="number" name="mobile_number" id="phone-input" placeholder="Enter Mobile Number" required>
+        <label>Vehicle Number:</label>
+        <input type="text" name="vehicle_number" id="vehicle-number-input" placeholder="Enter Vehicle Number" required>
+        <label>Vehicle Type:</label>
+        <select name="vehicle_type" id="vehicle-type-input" onchange="addAmount()">
+            <option selected disabled>Select Vehicle Type</option>
+            <option value="12/14 Tyres and its equivalent">12/14 Tyres and its equivalent</option>
+            <option value="18 Tyres and its equivalent">18 Tyres and its equivalent</option>
+            <option value="22 Tyres and its equivalent">22 Tyres and its equivalent</option>
+            <option value="Luxury Buses and its equivalent">Luxury Buses and its equivalent</option>
+            <option value="Pick up and its equivalent (4 Tyres)">Pick up and its equivalent (4 Tyres)</option>
+            <option value="Pick up and Heavy Duties 6/8 Tyres">Pick Up and Heavy Duties 6/8 Tyres</option>
+        </select>
+        <label>Origin State:</label>
+        <input type="text" name="origin_state" id="origin-state-input" placeholder="Enter Origin State" required>
+        <label>Origin LGA:</label>
+        <input type="text" name="origin_lga" id="origin-lga-input" placeholder="Enter Origin LGA" required>
+        <label>Destination State:</label>
+        <input type="text" name="destination_state" id="destination-state-input" placeholder="Enter Destination State" required>
+        <label>Destination LGA:</label>
+        <input type="text" name="destination_lga" id="destination-lga-input" placeholder="Enter Destination LGA" required>
+        <label>Contact:</label>
+        <input type="number" name="contact" id="contact-input" placeholder="Enter Contact" required>
+        <label>Terminal ID:</label>
+        <select name="terminal_id" id="terminal-input">
+            <option value="201167SX">201167SX</option>
+            <option value="201120TD">201120TD</option>
+            <option value="201104TD">201104TD</option>
+            <option value="201182SX">201182SX</option>
+        </select>
+        
+        <label>Amount:</label>
+        <div class="amount-input"></div>
+        <button class="done" onclick="done()">Done</button>
+        
+    </form>
+    
 
-    <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+        
+    
+    <script src="script.js">
+        var allText = document.body.innerText;
+        allText.style.transform = "scale(1.2)"
+    </script>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
-
 </html>
